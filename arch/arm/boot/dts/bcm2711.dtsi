@@ -998,29 +998,14 @@
 	};
 
 	uart2_gpio0: uart2_gpio0 {
-		pin-tx {
-			pins = "gpio0";
-			function = "alt4";
-			bias-disable;
-		};
-		pin-rx {
-			pins = "gpio1";
-			function = "alt4";
-			bias-pull-up;
-		};
+		brcm,pins = <0 1>;
+		brcm,function = <BCM2835_FSEL_ALT4>;
 	};
 	uart2_ctsrts_gpio2: uart2_ctsrts_gpio2 {
-		pin-cts {
-			pins = "gpio2";
-			function = "alt4";
-			bias-pull-up;
-		};
-		pin-rts {
-			pins = "gpio3";
-			function = "alt4";
-			bias-disable;
-		};
+		brcm,pins = <2 3>;
+		brcm,function = <BCM2835_FSEL_ALT4>;
 	};
+
 	uart3_gpio4: uart3_gpio4 {
 		pin-tx {
 			pins = "gpio4";
